@@ -1,0 +1,21 @@
+What is instance variable?
+- Each piece of data a class manages is called instance variable.
+
+What is a constructor?
+- A constructor is a method with same name as the class. It initializes a new object on the heap by assigning values to all instance variables.
+
+What is a default constructor?
+- If we do not write a constructor for a class, the java compiler will create one for us and it will set all the the instance variables to their default values.
+
+Give different uses of "this" keyword.
+- A constructor can call another constructor using "this" command.<br>
+- We can use it to overcome shadowing if the parameter name is similar to an instance variable. <br>
+- We use "this" in methods to clarify that a variable or a member belongs to the object whose code is executing right now.
+- It helps improve the code readibility and code comprehension.
+
+What is a java object?
+- Its an instance of the class.
+
+What is encapsulation?
+- 
+

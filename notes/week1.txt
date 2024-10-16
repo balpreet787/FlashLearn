@@ -1,0 +1,78 @@
+How does java work?
+- Source files are written in .java files and the compiled to .class files the at contain java bytecode. Java bytecode is executed "Just-in-time" instance of the Java Virtual Machine(JVM). JVM is the interpreter of the bytecode.
+
+Where are objects created/initialised?
+- They are created on the heap.
+
+Where is the state store in the class(data it contains)?
+- Instance variables
+
+- Will wrong indentation throw an compiler error?
+- It won't (it is only critical for the developers, semicolon for the compiler)
+
+What is the point of entry in the program?
+- main method (JVM always looks for this)
+
+is out a static member of the System class?
+- True
+
+What are the naming conventions in java for class, variables, methods and constants?
+- TitleCase for classes, camelCase for variables and method, and UPPER_CASE like this for constants.
+
+Java identifiers can begin with a digit?
+- Absolutely not, why would you even think that they would.
+
+What does it mean that Java is a strongly typed language?
+- It means the every object must have a type.
+
+What does it mean that Java is a statically typed language?
+- It means the variables in java need a declared data type and the variable can only store/refer to things of that data type. Java’s compiler will generate a type 
+incompatibility error if we try to mix data types.
+
+Where are primitives in Java stored?
+- Primitives are stored on stack inside the method where it is used. There is no special object created on the heap.
+
+The size and nature of all the data types are the same on all platforms?
+- True
+
+What are the different ways data conversions take place?
+- Three different ways are:
+    Assignment conversion => It occours automatically when a primitive value stored in a variable is assigned to a variable of a different, wider, primitive type.<br> Example:<br> byte smallValue = 124;<br> int widerType = smallValue<br>
+    Promotion => It is widenning that occurs automatically in arithmetic expressions that combines types.<br>
+    Casting => It is a powerful and dangerous technique for conversion. Both widenning and narrowing conversion can be done be explicitly casting a value.<br> Example:<br> int total = 50;<br> double result = double(total)/6; (Without the cast, the fractional part would be lost.)
+
+What does a widenning conversion mean?
+- It means the magnitude is always going to be preserved.
+
+Widenning Conversions for numbers:
+- byte -> short -> int -> long -> float -> double 
+
+Widenning conversion with char:
+- char ->int -> long -> float -> double
+
+What is a String in Java?
+- Java's String  object is an immutable sequence of primitive chars, we use  double quotes. We always use equals method to compare strings.
+
+What does Java variables whose data type is a primitive store and  whose is class store?
+- Primitives store a value and class variables store an address.
+
+What is a null:
+- A null is the value in an object reference that isnt currently storing a memory address.
+
+Can we assign null to primitive types?
+- Nope we can't only objects
+
+How is stuff stored on Heaps and Stacks in Java?
+- Heaps store the created objects and stack stores primitives and references to objects.
+
+What are Identity and Equality?
+- in Identity we compare the object(address) and in Equality we compare the state of the object.
+
+What does it mean that Java is a pass by value language?
+- This means that that when the areguments are passed to methods, the copy of the argument's value is made. If the variable stores an object's address, it makes a copy of the address.
+
+Can you store primitives in Java Collections like ArrayList, hashMap, and HashSet?
+- No we can't, must use wrapper classes
+
+What happens when you invoke the nextLine() after invoking the nextInt() or nextDouble()?
+- When we invoke nextInt() or nextDouble(), the method doesnt ready the newline character at the end of the input, so if we call nextLine() without clearing the buffer, the newline character is still going to be there and the scanner is going to the think the user pressed enter take the empty string as input.

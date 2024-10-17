@@ -26,7 +26,7 @@ What does overloading an constructor mean?
 -Constructor overloading in Java refers to defining multiple constructors within the same class, each having a different parameter list (either in the number of parameters, type of parameters, or both). This allows you to create objects of the class in different ways, depending on which constructor you call.
 
 How do we reduce code duplication when overloading constructor?
-- We prevent code duplication by using constructor chaining.All the constructors pass their parameters plus “something else” to a “master” constructor which performs the logic and initialization of the instance variables. We can call other constructors by using the <b>this()</b> keyword.<br><img src="notes/chaining.png" alt="ConstructorChaining" height="200" width="200">
+- We prevent code duplication by using constructor chaining.All the constructors pass their parameters plus “something else” to a “master” constructor which performs the logic and initialization of the instance variables. We can call other constructors by using the <b>this()</b> keyword.<br><img src="notes/chaining.png" alt="ConstructorChaining" height="700" width="500">
 
 
 Give different uses of "this" keyword.
@@ -75,7 +75,7 @@ What is a variable length parameter list?
 - When we don't know the number of parameters that are going to be passed to the method, we can use ellepsis like this <b><i>"public void printGrades(Grade... grades){stuff;}". </b></i> The parameters are automatically put in an array to be used in the method. They must be placed last.
 
 What is a singleton design pattern?
-- Singleton pattern is used when when want to control the number of instances of a class. We can do this by using static factory method. We make the Singleton class's contructor private so it can not be initialised from outside the class.<br><img src="notes/singleton.png" alt="singletonCode" height="200" width="200">
+- Singleton pattern is used when when want to control the number of instances of a class. We can do this by using static factory method. We make the Singleton class's contructor private so it can not be initialised from outside the class.<br><img src="notes/singleton.png" alt="singletonCode" height="500" width="600">
 
 What are the java.base modules that don't need to be imported to be used in our code?
 - java.lang

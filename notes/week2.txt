@@ -7,6 +7,28 @@ What is a constructor?
 What is a default constructor?
 - If we do not write a constructor for a class, the java compiler will create one for us and it will set all the the instance variables to their default values.
 
+Write the order in which elements inside the class are conventionally placed.
+-<ol>
+<li>Constants which are final and static, and which can be public or private.</li>
+<li>Class variables which are static, and are usually private.</li>
+<li>Instance variables which are always private.</li>
+<li>One or more constructors which accept parameters to initialize instance variables to correct state.</li>
+<li>Accessors and mutators when required.</li>
+<li>Behavioural methods that are usually public.</li>
+<li>Auxiliary or helper methods which are usually private.</li>
+<li>A public toString method that returns a String representation of the object’s state.</li>
+<li> A public equals method which accepts a parameter of type Object and returns true if the argu-
+ment is equal to the object executing the method.</li>
+</li>A hashCode method. </li>
+</ol>
+
+What does overloading an constructor mean?
+-Constructor overloading in Java refers to defining multiple constructors within the same class, each having a different parameter list (either in the number of parameters, type of parameters, or both). This allows you to create objects of the class in different ways, depending on which constructor you call.
+
+How do we reduce code duplication when overloading constructor?
+- We prevent code duplication by using constructor chaining.All the constructors pass their parameters plus “something else” to a “master” constructor which performs the logic and initialization of the instance variables. We can call other constructors by using the <b>this()</b> keyword.<br><img src="notes/chaining.png" alt="ConstructorChaining" height="200" width="200">
+
+
 Give different uses of "this" keyword.
 - A constructor can call another constructor using "this" command.<br>
 - We can use it to overcome shadowing if the parameter name is similar to an instance variable. <br>
@@ -17,5 +39,46 @@ What is a java object?
 - Its an instance of the class.
 
 What is encapsulation?
-- 
+- Encapsulation is the process of bundling data and methods that work on the data in a single class. By encapsulating variables, it restricts the direct access of the internal data by making thee variables private and provides controlled access to these variables via public methods like getters and setters.
 
+What is Information hiding?
+- It hides the internal implementation details from the outside world and exposes only the necassary parts of the class. Information hiding minimizes the interdependence between different classes, making the code easier to maintain, understand and modify.
+
+What are the four types of visibility modifiers?
+- public, private, protected and package-default
+
+Local variables are implicitly public, True or False?
+- False (they are implicitly private because of their scope)
+
+Every instance variable needs a mutator, True or False? Why or Why not?
+- False (We must try to minimize what is mutable in our classes, as it would easier to maintain or debug)
+
+Why do we use toString?
+- The purpose of toString is to describe the state of the object. It returns the names and the values of all the instance variables. This method is for developers not users.
+
+What do we mean when we say "Classes employ self governance"?
+- It means each class is responsible for manipulating its own data.
+
+What is Responsibility-Driven design?
+- Each module must only have one responsibility and it should perform that responsibility with minimum reliance on other modules.
+
+What is coupling?
+- When one class relies on another, its called coupling.
+
+Are local variables initialised to default values when no value is assigned explicitly?
+- No they are not, they need to be explicitly assigned a value when they are initialised.
+
+- Are instance variables initialised to default values when no value is assigned explicitly?
+- Yes they are
+
+What is a variable length parameter list?
+- When we don't know the number of parameters that are going to be passed to the method, we can use ellepsis like this <b><i>"public void printGrades(Grade... grades){stuff;}". </b></i> The parameters are automatically put in an array to be used in the method. They must be placed last.
+
+What is a singleton design pattern?
+- Singleton pattern is used when when want to control the number of instances of a class. We can do this by using static factory method. We make the Singleton class's contructor private so it can not be initialised from outside the class.<br><img src="notes/singleton.png" alt="singletonCode" height="200" width="200">
+
+What are the java.base modules that don't need to be imported to be used in our code?
+- java.lang
+
+Why is it better to use StringBuilder instead of concatenating strinds using the '+' operator?
+- Using the the '+' is slower than using StringBuilder since it uses quadratic time(O(n<sup>2</sup>)). This happens becauses strings immutable and when they are concatenated, the contents of both the strings are copied.

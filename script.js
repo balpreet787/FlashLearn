@@ -1,7 +1,7 @@
-function writeWeek1() {
+function writeAllQuestions(file) {
     // Split the text into lines
     $('#content').empty();
-    $.get("notes/week1.txt", function (data) {
+    $.get(file, function (data) {
 
         var lines = data.split('\n');
         var contentDiv = $('#content');
@@ -33,11 +33,11 @@ function writeWeek1() {
     });
 }
 
-function writeFlashWeek1() {
+function writeFlashQuestions(file) {
 
     flashDict = {};
     $('#content').empty();
-    $.get("notes/week1.txt", function (data) {
+    $.get(file, function (data) {
 
         var lines = data.split('\n');
 
@@ -71,8 +71,16 @@ function writeFlashWeek1() {
 }
 
 function setup() {
-    $("#mod9").click(writeWeek1);
-    $("#flashMod9").click(writeFlashWeek1);
+    writeAllQuestions("notes/week1.txt");
+    for (let i = 1; i <= 2; i++) {
+        $(`#week${i}`).click(function () {
+            writeAllQuestions(`notes/week${i}.txt`);
+        });
+        $(`#flashWeek${i}`).click(function () {
+            writeFlashQuestions(`notes/week${i}.txt`);
+        });
+    }
+
 }
 
 $(document).ready(setup);

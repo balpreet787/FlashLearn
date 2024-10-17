@@ -1,5 +1,6 @@
 How does java work?
-- Source files are written in .java files and the compiled to .class files the at contain java bytecode. Java bytecode is executed "Just-in-time" instance of the Java Virtual Machine(JVM). JVM is the interpreter of the bytecode.
+- Source files are written in .java files and the compiled to .class files the at contain java bytecode.
+Java bytecode is executed "Just-in-time" instance of the Java Virtual Machine(JVM). JVM is the interpreter of the bytecode.
 
 Where are objects created/initialised?
 - They are created on the heap.
@@ -69,7 +70,7 @@ What are Identity and Equality?
 - in Identity we compare the object(address) and in Equality we compare the state of the object.
 
 What does it mean that Java is a pass by value language?
-- This means that that when the areguments are passed to methods, the copy of the argument's value is made. If the variable stores an object's address, it makes a copy of the address.
+- This means that that when the arguments are passed to methods, the copy of the argument's value is made. If the variable stores an object's address, it makes a copy of the address.
 
 Can you store primitives in Java Collections like ArrayList, hashMap, and HashSet?
 - No we can't, must use wrapper classes
